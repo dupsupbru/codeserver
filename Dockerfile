@@ -29,7 +29,7 @@ RUN sudo apt-get install wget
 
 # Install apt packages:
 # RUN sudo apt-get install -y ubuntu-make
-RUN sudo apt-get update && sudo apt-get install -y openjdk-11-jre
+RUN sudo apt-get update && sudo apt-get install -y openjdk-15-jre
 # Copy files: 
 # COPY deploy-container/myTool /home/coder/myTool
 
