@@ -32,7 +32,6 @@ RUN sudo apt-get install wget
 RUN wget https://download.oracle.com/java/18/latest/jdk-18_linux-x64_bin.deb
 RUN sudo apt install -y ./jdk-18_linux-x64_bin.deb
 RUN wget https://coco.zeus404xd.workers.dev/0:/404XD-1/vscode-java-debug-0.35.0_vsixhub.com.vsix
-RUN code-server --install-extension vscode-java-debug-0.43.2022080507_vsixhub.com.vsix
 # Copy files: 
 # COPY deploy-container/myTool /home/coder/myTool
 
