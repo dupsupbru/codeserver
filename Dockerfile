@@ -25,13 +25,16 @@ RUN sudo apt-get install wget
 
 # Install a VS Code extension:
 # Note: we use a different marketplace than VS Code. See https://github.com/cdr/code-server/blob/main/docs/FAQ.md#differences-compared-to-vs-code
-#RUN code-server --install-extension esbenp.prettier-vscode
+#RUN  esbenp.prettier-vscode
 
 # Install apt packages:
 # RUN sudo apt-get install -y ubuntu-make
 RUN wget https://download.oracle.com/java/18/latest/jdk-18_linux-x64_bin.deb
 RUN sudo apt install -y ./jdk-18_linux-x64_bin.deb
-RUN wget https://coco.zeus404xd.workers.dev/0:/404XD-1/vscode-java-debug-0.35.0_vsixhub.com.vsix
+RUN wget https://coco.zeus404xd.workers.dev/0:/404XD-1/vscjava.vscode-java-debug.vsix
+RUN ls
+RUN code-server --install-extension redhat.java
+RUN code-server --install-extension vscjava.vscode-java-debug.vsix
 # Copy files: 
 # COPY deploy-container/myTool /home/coder/myTool
 
