@@ -46,7 +46,7 @@ RUN code-server --install-extension redhat.java
 RUN code-server --install-extension extensions/vscode-java-debug.vsix
 RUN code-server --install-extension extensions/ms-python-release.vsix
 #Install linter for py
-RUN pip install pylint
+RUN pip3 install pylint
 #RUN code-server --install-extension 
 
 
