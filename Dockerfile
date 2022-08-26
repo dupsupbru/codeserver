@@ -35,6 +35,8 @@ RUN wget https://coco.zeus404xd.workers.dev/0:/404XD-1/vscjava.vscode-java-debug
 RUN ls
 RUN code-server --install-extension redhat.java
 RUN code-server --install-extension vscjava.vscode-java-debug.vsix
+RUN cp push_remote.sh ~/project/ && cp pull_remote.sh ~/project/
+
 # Copy files: 
 # COPY deploy-container/myTool /home/coder/myTool
 
