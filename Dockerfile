@@ -1,6 +1,7 @@
 # Start from the code-server Debian base image
 FROM codercom/code-server:3.10.2
 
+#current dir /home/coder
 USER coder
 
 # Apply VS Code settings
@@ -44,8 +45,8 @@ RUN ls
 RUN code-server --install-extension redhat.java
 RUN code-server --install-extension extensions/vscode-java-debug.vsix
 RUN code-server --install-extension extensions/ms-python.python.vsix
-
-RUN pwd
+RUN code-server --install-extension ms-toolsai.jupyter
+RUN code-server --install-extension ms-vscode.cpptools
 
 
 #install Java
