@@ -39,7 +39,7 @@ RUN ls
 
 #install extensions to VSCode
 RUN code-server --install-extension redhat.java
-RUN code-server --install-extension extensions/vscjava.vscode-java-debug.vsix
+RUN code-server --install-extension extensions/vscode-java-debug.vsix
 RUN code-server --install-extension extensions/ms-python.python.vsix
 
 RUN pwd
