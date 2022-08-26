@@ -46,7 +46,7 @@ RUN code-server --install-extension redhat.java
 RUN code-server --install-extension extensions/vscode-java-debug.vsix
 RUN code-server --install-extension extensions/ms-python.python.vsix
 RUN code-server --install-extension ms-toolsai.jupyter
-RUN code-server --install-extension ms-vscode.cpptools
+#RUN code-server --install-extension 
 
 
 #install Java
