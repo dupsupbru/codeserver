@@ -22,7 +22,7 @@ COPY ext /home/coder/extensions
 RUN ls /home/coder/extensions
 
 #Install pip
-RUN sudo apt install python3-pip
+RUN sudo apt install -y python3-pip
 
 # Fix permissions for code-server
 RUN sudo chown -R coder:coder /home/coder/.local
