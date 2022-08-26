@@ -32,7 +32,7 @@ else
     if [ $RCLONE_VSCODE_TASKS = "true" ]; then
         # copy our tasks config to VS Code
         echo "[$PREFIX] Applying VS Code tasks for rclone"
-        cp /tmp/rclone-tasks.json /home/coder/.local/share/code-server/User/tasks.json
+        cp /home/coder/rclone-tasks.json /home/coder/.local/share/code-server/User/tasks.json
         # install the extension to add to menu bar
         code-server --install-extension actboy168.tasks&
     else
