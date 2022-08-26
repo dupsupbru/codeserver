@@ -20,6 +20,9 @@ COPY deploy-container/rclone-tasks.json /home/coder/rclone-tasks.json
 COPY ext /home/coder/extensions
 RUN ls /home/coder/extensions
 
+#Install pip
+RUN sudo apt install python3-pip
+
 # Fix permissions for code-server
 RUN sudo chown -R coder:coder /home/coder/.local
 RUN sudo apt-get install wget
