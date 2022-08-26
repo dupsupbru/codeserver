@@ -44,6 +44,7 @@ RUN ls
 #install extensions to VSCode
 RUN code-server --install-extension redhat.java
 RUN code-server --install-extension extensions/vscode-java-debug.vsix
+#py version 2021.2.582707922 vsix
 RUN code-server --install-extension extensions/ms-python-release.vsix
 #Install linter for py
 RUN pip3 install pylint
