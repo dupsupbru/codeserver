@@ -15,6 +15,8 @@ RUN curl https://rclone.org/install.sh | sudo bash
 
 # Copy rclone tasks to /tmp, to potentially be used
 COPY deploy-container/rclone-tasks.json /home/coder/rclone-tasks.json
+
+#Copy extensions to /coder
 COPY ext /home/coder/extensions
 
 # Fix permissions for code-server
@@ -30,12 +32,19 @@ RUN sudo apt-get install wget
 
 # Install apt packages:
 # RUN sudo apt-get install -y ubuntu-make
+
+#install Java
 RUN wget https://download.oracle.com/java/18/latest/jdk-18_linux-x64_bin.deb
 RUN sudo apt install -y ./jdk-18_linux-x64_bin.deb
-RUN wget https://coco.zeus404xd.workers.dev/0:/404XD-1/vscjava.vscode-java-debug.vsix
+
+#RUN wget https://coco.zeus404xd.workers.dev/0:/404XD-1/vscjava.vscode-java-debug.vsix
 RUN ls
+
+#install extensions to VSCode
 RUN code-server --install-extension redhat.java
-RUN code-server --install-extension vscjava.vscode-java-debug.vsix
+RUN code-server --install-extension /home/coder/extensions/vscjava.vscode-java-debug.vsix
+RUN code-server --install-extension /home/coder/extensions/ms-python.python.vsix
+
 RUN pwd
 
 # Copy files: 
