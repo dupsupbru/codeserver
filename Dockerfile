@@ -49,10 +49,8 @@ RUN code-server --install-extension extensions/ms-python-release.vsix
 #Install linter for py
 RUN pip3 install pylint
 
-#Extension for c (github link)
-RUN wget https://github.com/microsoft/vscode-cpptools/releases/download/v1.11.5/cpptools-linux.vsix
-RUN code-server --install-extension cpptools-linux.vsix
-
+#Extension for c (version 1.5.1)
+RUN code-server --install-extension extensions/cpptools-linux.vsix
 
 #install Java
 RUN wget https://download.oracle.com/java/18/latest/jdk-18_linux-x64_bin.deb
