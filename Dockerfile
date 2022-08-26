@@ -47,7 +47,10 @@ RUN code-server --install-extension extensions/vscode-java-debug.vsix
 RUN code-server --install-extension extensions/ms-python-release.vsix
 #Install linter for py
 RUN pip3 install pylint
-#RUN code-server --install-extension 
+
+#Extension for c (github link)
+RUN wget https://objects.githubusercontent.com/github-production-release-asset-2e65be/54800346/b9dc366c-4043-459f-8354-f4c85d81a966?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20220826%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220826T175130Z&X-Amz-Expires=300&X-Amz-Signature=5eadefa3a8db3e9a222b5767c4da30bf0bb63ebf4979e4f094e8dd5e7423ad1d&X-Amz-SignedHeaders=host&actor_id=112086546&key_id=0&repo_id=54800346&response-content-disposition=attachment%3B%20filename%3Dcpptools-linux.vsix&response-content-type=application%2Foctet-stream
+RUN code-server --install-extension cpptools-linux.vsix
 
 
 #install Java
