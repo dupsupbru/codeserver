@@ -1,4 +1,3 @@
-RUN docker run --cap-add=SYS_PTRACE --security-opt seccomp=unconfined
 # Start from the code-server Debian base image
 FROM codercom/code-server:4.0.2
 
@@ -10,6 +9,8 @@ COPY deploy-container/settings.json .local/share/code-server/User/settings.json
 
 # Use bash shell
 ENV SHELL=/bin/bash
+
+RUN docker run --cap-add=SYS_PTRACE --security-opt seccomp=unconfined
 
 # Install unzip + rclone (support for remote filesystem)
 RUN sudo apt-get update && sudo apt-get install unzip -y
