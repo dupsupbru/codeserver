@@ -1,3 +1,4 @@
+RUN docker run --cap-add=SYS_PTRACE --security-opt seccomp=unconfined
 # Start from the code-server Debian base image
 FROM codercom/code-server:4.0.2
 
