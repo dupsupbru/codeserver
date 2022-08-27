@@ -14,6 +14,9 @@ ENV SHELL=/bin/bash
 RUN sudo apt-get update && sudo apt-get install unzip -y
 RUN curl https://rclone.org/install.sh | sudo bash
 
+#install c req gdb
+RUN sudo apt-get install -y gdb
+
 # Copy rclone tasks to /tmp, to potentially be used
 COPY deploy-container/rclone-tasks.json /home/coder/rclone-tasks.json
 
